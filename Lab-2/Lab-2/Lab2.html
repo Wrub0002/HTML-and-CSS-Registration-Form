@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"> 
+     <head>
+         <meta charset="utf-8">
+         <title>Lab 4 by Leonardo Wrubleski</title>
+         <link rel="stylesheet" type="text/css" href="css/style.css">
+     </head>
+    <body>
+     <form action="javascript:void(0);" method="post">
+    <div id="wrapper"> 
+        <header>
+            <h1 class="center">Registration</h1>
+            <p class="center">Please enter the following information. Fields marked with an asterisk (<span class="required">*</span>) are required.</p>
+        </header>
+        <div id="content">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <table>
+                    <!-- * First Name | textbox -->
+                    <tr>
+                        <td><span class="required">*</span><label for="firstName">First Name</label></td>
+                        <td><input type="text" id="firstName" name="FirstName"></td>
+                    </tr>
+                    <!-- * Last Name | textbox -->
+                    <tr>
+                        <td><span class="required">*</span><label for="lastName">Last Name</label></td>
+                        <td><input type="text" id="lastName" name="LastName"></td>
+                    </tr>
+                    <!-- * Address | textbox, with a size of 40 characters -->
+                    <tr>
+                        <td><span class="required">*</span><label for="address">Address</label></td>
+                        <td><input type="text" id="address" name="address" size="40"></td>
+                    </tr>
+                    <!-- * City | textbox -->
+                    <tr>
+                        <td><span class="required">*</span><label for="city">City</label></td>
+                        <td><input type="text" id="city" name="city"></td>
+                    </tr>
+                    <!-- * Province | dropdown box -->
+                    <tr>
+                        <td><span class="required">*</span><label for="province">Province</label></td>
+                        <td>
+                            <select name="Province" id="province">
+                                <option value="" hidden>Select a Province</option>
+                                <option value="BC">British Columbia</option>
+                                <option value="AB">Alberta</option>
+                                <option value="SK">Saskatchewan</option>
+                                <option value="MB">Manitoba</option>
+                                <option value="ON">Ontario</option>
+                                <option value="QC">Quebec</option>
+                                <option value="NB">New Brunswick</option>
+                                <option value="NS">Nova Scotia</option>
+                                <option value="PE">Prince Edward Island</option>
+                                <option value="NF">Newfoundland</option>
+                                <option value="YK">Yukon</option>
+                                <option value="NWT">Northwest Territories</option>
+                                <option value="NU">Nunavut</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!-- * Postal Code | textbox, maximum length of 6 characters -->
+                    <tr>
+                        <td><span class="required">*</span><label for="postalCode">Postal Code</label></td>
+                        <td><input type="text" id="postalCode" name="PostalCode" maxlength="6"></td>
+                    </tr>
+                    <!-- * Email address | textbox -->
+                    <tr>
+                        <td><span class="required">*</span><label for="email">Email</label></td>
+                        <td><input type="text" id="email" name="email"></td>
+                    </tr>
+                    <!-- * Home phone | textbox -->
+                    <tr>
+                        <td><span class="required">*</span><label for="homePhone">Home Phone</label></td>
+                        <td><input type="text" id="homePhone" name="HomePhone"></td>
+                    </tr>
+                    <!-- Work phone | textbox -->
+                    <tr>
+                        <td><label for="workPhone">Work Phone</label></td>
+                        <td><input type="text" id="workPhone" name="WorkPhone"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Payment Information</legend>
+                <table>
+                    <!-- Credit Card Type | radio buttons -->
+                    <tr>
+                        <td>
+                            <label>Credit Card type:</label>
+                        </td>
+                        <td>
+                            <label for="creditCardVisa"><img src="images/visa.png" alt="Visa flag" title="visa"></label>
+                            <input type="radio" id="creditCardVisa" name="creditCardType" value="Visa">
+                            <label for="creditMasterCard"><img src="images/mastercard.png" alt="MasterCard flag" title="MasterCard"></label>
+                            <input type="radio" id="creditMasterCard" name="creditCardType" value="MasterCard">
+                            <label for="creditCardAmex"><img src="images/amex.png" alt="Amex flag" title="Amex"></label>
+                            <input type="radio" id="creditCardAmex" name="creditCardType" value="Amex">
+                        </td>
+                    </tr>
+                    <!-- Credit Card Number | textbox -->
+                    <tr>
+                        <td><label for="creditCardNumber">Credit Card Number <span class="required">*</span></label></td>
+                        <td><input type="text" id="creditCardNumber" name="CreditCardNumber"></td>
+                    </tr>
+                    <!-- Expiry Date | textbox, maximum 5 characters (MM/YY) -->
+                    <tr>
+                        <td><label for="ExpiryMonth">Expiry Date (MM/YY)</label></td>
+                        <td><input type="text" id="ExpiryMonth" name="ExpiryMonth" size="2">
+                            <span>/</span>
+                            <input type="text" id="ExpiryYear" name="ExpiryYear" size="2"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Agree and Submit</legend>
+                <table>
+                    <!-- Agree to Terms and Conditions? | checkbox, value of 'yes' -->
+                    <tr>
+                        <td>
+                            <label for="agreeCheckbox">Check if you agree with our <a href="https://google.com">Terms And Conditions</a> <span class="required">*</span></label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="agreeCheckbox" name="termsAndConditions" value="yes">
+                        </td>
+                    </tr>
+                    <!-- Submit and Reset buttons -->
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit">Submit Registration</button>
+                            <button type="reset">Reset form</button>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </div><!-- End Content -->
+    </div><!-- End Wrapper -->
+</form>
+<footer>
+    <p>&copy;2013 CST8285. All rights reserved.</p>
+</footer>
+</body>
+</html>
